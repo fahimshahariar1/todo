@@ -31,7 +31,7 @@ class Home extends StatelessWidget {
                       maxHeight: 20,
                       minWidth: 25,
                     ),
-                    hintText: "Search"),
+                    hintText: "Searchh"),
               ),
             ),
             ListView(
