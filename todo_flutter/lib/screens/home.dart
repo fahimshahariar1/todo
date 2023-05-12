@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../consts/colors.dart';
+import '../widgets/todo_item.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -34,13 +35,16 @@ class Home extends StatelessWidget {
                     hintText: "Search"),
               ),
             ),
-            ListView(
-              children: [
-                Container(
-                  margin: EdgeInsets.only(top: 50, bottom: 20),
-                )
-              ],
-
+            Expanded(
+              child: ListView(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(top: 50, bottom: 20),
+                    child: Text("All ToDos", style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),),
+                  ),
+                  TodoItem()
+                ],
+              ),
             )
           ],
         ),
@@ -61,7 +65,7 @@ class Home extends StatelessWidget {
             size: 30,
           ),
           CircleAvatar(
-            child: Image.asset("images/f.png"),
+            backgroundImage: AssetImage("images/f.png"),
           )
         ],
       ),
